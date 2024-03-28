@@ -28,8 +28,7 @@ The application follows a client-server architecture, with a client-side applica
 There are 4 layers in the architecture: 
 1. The database layer. 
 2. The server layer: the server communicate with the data base and access to the stored data.
-3. The API layer: A functions set wich are user exposed to avoid direct access from the user to the server/ database.
-4. The client layer.
+3. The API layer:A set of functions that the client-side application can call to perform operations on the server without directly accessing the database.
 Here's how the various components of the system interact:
 
 ### Client-Side Application:
@@ -86,7 +85,7 @@ Note that pictures save locally on the server since only jpg is supported, it sa
 
 ## Data Protection
 
-The system uses a musql database to store data, ensuring data integrity and preventing foot faults.
+The system uses a MySQL database, ensuring data integrity.
 
 ## Requirements
 
