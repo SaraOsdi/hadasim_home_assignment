@@ -2,6 +2,8 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { useAddMember } from "../hooks/useAddMember";
 import { toast } from "react-toastify";
 import { MIN_DATE_OF_BIRTH, validateMember } from "./validations";
+import { useRef } from "react";
+import { AddImage } from "../api/members";
 
 export type MemberFields = {
   id_official: string;
@@ -24,6 +26,7 @@ export type MemberFields = {
 
 export function AddMember() {
   const { register, handleSubmit } = useForm<MemberFields>();
+  const imageRef = useRef<HTMLInputElement | null>(null)
 
   const addMemberMutation = useAddMember();
 
@@ -34,7 +37,16 @@ export function AddMember() {
       return toast.error(error)
     }
 
-    addMemberMutation.mutate(memberData);
+    const result = await addMemberMutation.mutateAsync(memberData);
+    console.log(result)
+
+    if (imageRef.current?.files?.length) {
+      const imageFormData = new FormData();
+      imageFormData.append('id', memberData.id_official)
+      imageFormData.append('image', imageRef.current.files[0])
+      await AddImage(imageFormData)
+    }
+
   };
 
   return (
@@ -99,6 +111,18 @@ export function AddMember() {
           type="date"
           min={MIN_DATE_OF_BIRTH}
           {...register("date_of_birth", { required: true })}
+          style={{ marginBottom: "4vh" }}
+        />
+        <div>
+          <label htmlFor="avatar">
+            Avatar
+          </label></div>
+        <input
+          id='avatar'
+          type="file"
+          accept="image/jpeg"
+          ref={imageRef}
+          min={MIN_DATE_OF_BIRTH}
           style={{ marginBottom: "4vh" }}
         />
         <p>1st Vaccination date</p>

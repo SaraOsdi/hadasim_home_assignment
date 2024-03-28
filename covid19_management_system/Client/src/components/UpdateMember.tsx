@@ -1,5 +1,7 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useUpdateMember } from "../hooks/useUpdateMember";
+import { useRef } from "react";
+import { AddImage } from "../api/members";
 
 type Inputs = {
   id_official: string;
@@ -22,6 +24,7 @@ type Inputs = {
 
 export function UpdateMember({ selectedMember }) {
   const { register, handleSubmit, } = useForm<Inputs>();
+  const imageRef = useRef<HTMLInputElement | null>(null)
 
   const updateMemberMutation = useUpdateMember();
 
@@ -40,7 +43,14 @@ export function UpdateMember({ selectedMember }) {
       }
     }
 
-    updateMemberMutation.mutate(updatedMember);
+    await updateMemberMutation.mutateAsync(updatedMember);
+    if (imageRef.current?.files?.length) {
+      const imageFormData = new FormData();
+      imageFormData.append('id', selectedMember.id_official)
+      imageFormData.append('image', imageRef.current.files[0])
+      await AddImage(imageFormData)
+      window.location.reload()
+    }
   };
 
   return (
@@ -101,6 +111,17 @@ export function UpdateMember({ selectedMember }) {
           defaultValue={selectedMember.address_house_num}
           {...register("address_house_num", { required: true })}
           style={{ marginBottom: "2vh" }}
+        />
+        <div>
+          <label htmlFor="avatar">
+            Avatar
+          </label></div>
+        <input
+          id='avatar'
+          type="file"
+          accept="image/jpeg"
+          ref={imageRef}
+          style={{ marginBottom: "4vh" }}
         />
         <>
           <p>1st Vaccination date</p>

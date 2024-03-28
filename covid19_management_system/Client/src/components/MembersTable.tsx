@@ -68,7 +68,9 @@ export function TableSelection({ members }) {
         <Table.Td />
         <Table.Td>
           <Group gap="sm">
-            <Avatar size={26} src={item.avatar} radius={26} />
+            {/* <Avatar size={26} src={item.avatar} radius={26} /> */}
+            <Avatar size={26} src={`http://localhost:3302/uploads/${item.id_official}.jpg`} radius={26} />
+
             <Text size="sm" fw={500}>
               {item.name}
             </Text>

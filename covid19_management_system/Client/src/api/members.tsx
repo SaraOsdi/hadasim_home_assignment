@@ -13,6 +13,14 @@ export const AddMember = async (memberData: unknown) => {
   return response.data;
 };
 
+export const AddImage = async (imageFormData: unknown) => {
+  const response = await axios.post(
+    `http://127.0.0.1:3302/api/members/image`,
+    imageFormData
+  );
+  return response.data;
+};
+
 export const UpdateMember = async (memberData: unknown) => {
   const response = await axios.patch(
     `http://127.0.0.1:3302/api/members/`,

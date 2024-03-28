@@ -1,5 +1,4 @@
 require("dotenv").config();
-import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import express from "express";
 const app = express();
@@ -16,7 +15,7 @@ app.use(morgan("dev"));
 app.use(cors({ credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(express.static('public'));
 
 app.use(`/api`, apiRoutes);
 

@@ -319,3 +319,8 @@ export async function deleteMember(req: Request, res: Response) {
     res.status(500).json({ error });
   }
 }
+
+export async function addMemberImage(req: Request, res: Response) {
+  console.log(req.file?.path)
+  res.sendStatus(200)
+}
