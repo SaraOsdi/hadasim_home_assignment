@@ -131,24 +131,29 @@ Below you can see how many members didn't get any vaccine.
 ## Screenshots
 
 ### Homepage:
-![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/bcf35510-1071-45f4-b1db-6a4fde70851c)
-![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/3a5e0d46-1059-40e9-a65b-526a7221a74e)
+![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/dfdf4cb8-d66f-4e0e-aa9a-716053ec9b7e)
+![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/44c3bdde-0148-48ac-9cd4-d97a4e99d423)
+
 
 
 ### Statistics on Covid19:
 ![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/442b622f-75a3-419d-9a2f-a796a40e9586)
 
 
+
 ### Adding New Member:
 ![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/7215be26-063c-49dd-ab60-85b1047cad3b)
+
 
 
 ### Basic Member Information:
 ![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/13ae0c56-4a2a-48e1-8521-d35f87823920)
 
 
+
 ### Edit Member Details:
 ![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/8bb5cce9-52a1-42b4-b142-b92f1c39b88b)
+
 
 
 ### Member Covid19 Details:
@@ -156,12 +161,17 @@ Below you can see how many members didn't get any vaccine.
 
 ![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/9cab7965-9088-487f-956e-93f57e2e7b4d)
 
+
+
 ### Edding a Picture:
-![Uploading image.png…]()
+![צילום מסך 2024-03-28 171522](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/4f912e4d-c488-424b-89f5-4960c0760806)
+
+
 
 
 ### Editing a Particular Vaccine:
 ![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/be51baca-d566-4574-9929-ba7acbdc5ed2)
+
 
 
 ### Edit/Add a Sick or Recovery Day:
