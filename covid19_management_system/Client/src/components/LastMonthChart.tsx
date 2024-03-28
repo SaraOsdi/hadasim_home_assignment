@@ -23,10 +23,11 @@ export const LastMonthInfo = ({ lastMonthInfo }) => {
 
   // Generate dates for the last month
   const dates = getLastMonthDates();
+  console.log({ dates })
+  console.log({ lastMonthInfo })
 
   // Map over the dates and create an array of objects with date and active_patients_per_day
   const dataForChart = dates.map((date) => {
-    console.log(lastMonthInfo, date);
     const infoForDate = lastMonthInfo.find(
       (info) => info.activity_date === date
     );
@@ -37,6 +38,7 @@ export const LastMonthInfo = ({ lastMonthInfo }) => {
         : 0,
     };
   });
+  console.log({ dataForChart })
 
   return (
     <>

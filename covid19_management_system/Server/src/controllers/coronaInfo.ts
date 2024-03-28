@@ -38,7 +38,7 @@ export async function coronaInfo(req: Request, res: Response) {
       ).toLocaleDateString();
 
       const parsedDate = parse(inputDateString, "d/M/yyyy", new Date());
-      const formattedDate = format(parsedDate, "yyyy-dd-MM");
+      const formattedDate = format(parsedDate, "yyyy-MM-dd");
 
       oneDayInfo.activity_date = formattedDate;
     }

@@ -8,6 +8,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, } from "react-toastify";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
       <MantineProvider>
         <RouterProvider router={router} />
+        <ToastContainer />
       </MantineProvider>
     </React.StrictMode>
   </QueryClientProvider>

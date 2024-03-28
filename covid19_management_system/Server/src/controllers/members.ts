@@ -288,8 +288,8 @@ export async function updateMember(req: Request, res: Response) {
       third_vaccination_date ? new Date(third_vaccination_date) : null,
       forth_vaccination_date ? new Date(forth_vaccination_date) : null,
       vaccine_manufacturer,
-      positive_test_date,
-      recovery_date,
+      positive_test_date ? new Date(positive_test_date) : null,
+      recovery_date ? new Date(recovery_date) : null,
       id_official,
     ];
 

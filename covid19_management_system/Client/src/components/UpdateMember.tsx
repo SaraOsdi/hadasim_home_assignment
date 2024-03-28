@@ -1,7 +1,5 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useUpdateMember } from "../hooks/useUpdateMember";
-import { ToastContainer } from "react-toastify";
-import { useEffect } from "react";
 
 type Inputs = {
   id_official: string;
@@ -55,7 +53,6 @@ export function UpdateMember({ selectedMember }) {
           maxWidth: "1000px",
         }}
       >
-        <ToastContainer />
         <input
           placeholder="goverment ID"
           type="text"
@@ -157,9 +154,9 @@ export function UpdateMember({ selectedMember }) {
         <p>Positive test date</p>
         <input
           placeholder="Positive test date"
-          type="datetime-local"
-          defaultValue={selectedMember.positive_test_date}
-          {...register("positive_test_date")}
+          type="date"
+          defaultValue={selectedMember.positive_test_date?.slice(0, 10)}
+          {...register("positive_test_date", { disabled: !!selectedMember.positive_test_date })}
           style={{ marginBottom: "2vh" }}
         />
         {!selectedMember.recovery_date && (
@@ -167,7 +164,7 @@ export function UpdateMember({ selectedMember }) {
             <p>Recovery date</p>
             <input
               placeholder="Recovery date"
-              type="datetime-local"
+              type="date"
               {...register("recovery_date")}
               style={{ marginBottom: "2vh" }}
             />

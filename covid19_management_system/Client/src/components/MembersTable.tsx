@@ -109,7 +109,6 @@ export function TableSelection({ members }) {
 
   return (
     <div style={{ marginBottom: rem(20), textAlign: "center" }}>
-      <ToastContainer />
       <h1 style={{ marginBottom: rem(10) }}>Covid19 Management System</h1>
       <Button
         variant="outline"
@@ -164,7 +163,7 @@ export function TableSelection({ members }) {
                 </Text>)
               }
 
-            }) : <div>Not vaccinated yet</div>}
+            }) : <div>No information yet</div>}
         </Modal>
       )
       }
@@ -174,7 +173,7 @@ export function TableSelection({ members }) {
             title="Add Member"
             opened={isAddMemberModalOpen}
             onClose={() => setIsAddMemberModalOpen(false)}
-            size="55%"
+            size={'100%'}
           >
             <AddMember />
           </Modal>

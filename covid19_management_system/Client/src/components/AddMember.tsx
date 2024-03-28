@@ -1,8 +1,9 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useAddMember } from "../hooks/useAddMember";
-import { ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
+import { MIN_DATE_OF_BIRTH, validateMember } from "./validations";
 
-type Inputs = {
+export type MemberFields = {
   id_official: string;
   name: string;
   phone_number: string;
@@ -22,12 +23,17 @@ type Inputs = {
 };
 
 export function AddMember() {
-  const { register, handleSubmit } = useForm<Inputs>();
+  const { register, handleSubmit } = useForm<MemberFields>();
 
   const addMemberMutation = useAddMember();
 
-  const onSubmit: SubmitHandler<Inputs> = async (memberData) => {
+  const onSubmit: SubmitHandler<MemberFields> = async (memberData) => {
     console.log(memberData);
+    const error = validateMember(memberData)
+    if (error) {
+      return toast.error(error)
+    }
+
     addMemberMutation.mutate(memberData);
   };
 
@@ -41,7 +47,6 @@ export function AddMember() {
           maxWidth: "1000px",
         }}
       >
-        <ToastContainer />
         <input
           placeholder="goverment ID"
           type="text"
@@ -84,31 +89,36 @@ export function AddMember() {
           {...register("address_house_num", { required: true })}
           style={{ marginBottom: "4vh" }}
         />
-        Date of birth
+        <div>
+          <label htmlFor="dob">
+            Date of birth
+          </label></div>
         <input
+          id='dob'
           placeholder="Date of birth"
           type="date"
+          min={MIN_DATE_OF_BIRTH}
           {...register("date_of_birth", { required: true })}
           style={{ marginBottom: "4vh" }}
         />
         <p>1st Vaccination date</p>
         <input
           placeholder="first vaccination date"
-          type="datetime-local"
+          type="date"
           {...register("first_vaccination_date")}
           style={{ marginBottom: "4vh" }}
         />
         <p>2nd Vaccination date</p>
         <input
           placeholder="second vaccination date"
-          type="datetime-local"
+          type="date"
           {...register("second_vaccination_date")}
           style={{ marginBottom: "4vh" }}
         />
         <p>3rd Vaccination date</p>
         <input
           placeholder="third vaccination date"
-          type="datetime-local"
+          type="date"
           {...register("third_vaccination_date")}
           style={{ marginBottom: "6vh" }}
         />
@@ -116,7 +126,7 @@ export function AddMember() {
         <span>4th Vaccination date</span>
         <input
           placeholder="forth vaccination date"
-          type="datetime-local"
+          type="date"
           {...register("forth_vaccination_date")}
           style={{ marginBottom: "4vh" }}
         />
@@ -129,14 +139,14 @@ export function AddMember() {
         <p>Positive test date</p>
         <input
           placeholder="Positive test date"
-          type="datetime-local"
+          type="date"
           {...register("positive_test_date")}
           style={{ marginBottom: "4vh" }}
         />
         <p>Recovery date</p>
         <input
           placeholder="Recovery date"
-          type="datetime-local"
+          type="date"
           {...register("recovery_date")}
           style={{ marginBottom: "4vh" }}
         />
