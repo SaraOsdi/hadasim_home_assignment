@@ -2,7 +2,7 @@
 
 ## System Description
 
-The Covd19 Management System was developed to streamline the management of COVID-19 related information among members of an HMO. This system provides comprehensive features for tracking vaccination records, managing member data, and monitoring pandemic-related data.
+The Covid19 Management System was developed to streamline the management of COVID-19 related information among members of an HMO. This system provides comprehensive features for tracking vaccination records, managing member data, and monitoring pandemic-related data.
 
 ## Table of Contents
 - [System Features](#system-features)
@@ -43,7 +43,7 @@ Here's how the various components of the system interact:
 - AddMember - handles adding new member and detailes inserting.
 
 Dependencies:
-Axios, Mantine, ReactDom.
+Axios, Mantine, ReactDom, Multer.
 
 
 ### Server-Side APIs:
@@ -64,6 +64,7 @@ Dotenv, BodyParser, CookieParser, Cors, Morgan.
 2. POST /addMember: Creates a new member.
 3. PATCH /updateMember:id: Updates details of a specific member by ID.
 4. DELETE /memberId/deleteMember: Deletes a specific member by ID.
+5. POST /image: Image uploading. transfers to a middleware for convention the picture.
 
 
 
@@ -78,9 +79,8 @@ Dotenv, BodyParser, CookieParser, Cors, Morgan.
 - members table: Stores information about members.
 Id, name, address,date of birth and phone numbers.
 - members_data table: Stores information about vaccinations and morbidity per member. this table is linked to the members table by id (not the official one). It contains dates of every vaccinations. vaccine manufactorer, morbidity(one time only) and recovery.
+Note that pictures save locally on the server since only jpg is supported, it saved under the id_official in Public.
 
-
-### Illustrative illustrations:
 
 
 
@@ -116,10 +116,12 @@ The system uses a musql database to store data, ensuring data integrity and prev
 
 Main page: containes a list of the members. by clicking on the eye icon you can see their morbidity and vaccinations details.
 You can edit the editable detailes - name, address, phone number, cell phone and to add new detailes about vaccinations and morbidity in the empty fields.
-Pay attention to dates, you cannot add a second vaccinations without the first one and a vaccin manufatorer, you cannot add recovery date without a positive date etc.
+Pay attention to dates, you cannot add a second vaccinations without the first one and a vaccin manufatorer, you cannot add recovery date without a positive date, vaccination manufactorer name without any vaccination etc.
 Click submit to save.
+You can upload a jpg image for each member whenever you want.
 New member: Add new in the main page below the headline, fill in the detailes with attention to their correctness, click submit.
 You will see immediately the new record in the list.
+
 
 Dasboard:
 You can see in the graph how many active patients were in each day of the last month.
@@ -130,6 +132,7 @@ Below you can see how many members didn't get any vaccine.
 
 ### Homepage:
 ![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/bcf35510-1071-45f4-b1db-6a4fde70851c)
+![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/3a5e0d46-1059-40e9-a65b-526a7221a74e)
 
 
 ### Statistics on Covid19:
@@ -137,21 +140,24 @@ Below you can see how many members didn't get any vaccine.
 
 
 ### Adding New Member:
-![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/8ee1ed26-eb6f-476c-9df3-fdbdbc9c775f)
+![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/7215be26-063c-49dd-ab60-85b1047cad3b)
 
 
 ### Basic Member Information:
-![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/7e1e294b-28bd-4ad4-a503-77578e38082d)
+![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/13ae0c56-4a2a-48e1-8521-d35f87823920)
 
 
 ### Edit Member Details:
-![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/55f01fe6-bb44-4e96-a27e-a8526b72610c)
+![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/8bb5cce9-52a1-42b4-b142-b92f1c39b88b)
 
 
 ### Member Covid19 Details:
 ![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/423447d1-5a90-452f-8c92-12a1be1cfb90)
 
 ![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/9cab7965-9088-487f-956e-93f57e2e7b4d)
+
+### Edding a Picture:
+![Uploading image.png…]()
 
 
 ### Editing a Particular Vaccine:
