@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  /* so we can get full control of the application */
+  margin: 0;
+  padding: 0;
+}
+

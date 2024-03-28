@@ -1,0 +1,47 @@
+{
+  "name": "apartmapvite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mantine/core": "^7.6.2",
+    "@mantine/hooks": "^7.6.2",
+    "@tanstack/react-query": "^5.28.8",
+    "@types/geojson": "^7946.0.13",
+    "@types/react-leaflet": "^3.0.0",
+    "@types/react-router-dom": "^5.3.3",
+    "axios": "^1.6.8",
+    "date-fns": "^3.6.0",
+    "leaflet": "^1.9.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.51.1",
+    "react-icons": "^5.0.1",
+    "react-leaflet": "^4.2.1",
+    "react-query": "^3.39.3",
+    "react-router-dom": "^6.22.3",
+    "react-toastify": "^10.0.5",
+    "recharts": "^2.12.3",
+    "tailwind": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.8",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.4.3",
+    "vite": "^5.0.8"
+  }
+}

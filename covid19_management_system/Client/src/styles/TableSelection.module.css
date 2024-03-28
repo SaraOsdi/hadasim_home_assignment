@@ -1,0 +1,9 @@
+.rowSelected {
+    background-color: var(--mantine-color-blue-light);
+  }
+  
+  .container {
+    max-height: 400px; 
+    padding: 12px;
+    overflow-y: auto; /* Allow vertical scrolling */
+  }
