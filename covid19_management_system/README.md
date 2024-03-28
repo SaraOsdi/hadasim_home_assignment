@@ -132,12 +132,11 @@ Below you can see how many members didn't get any vaccine.
 
 ### Homepage:
 ![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/dfdf4cb8-d66f-4e0e-aa9a-716053ec9b7e)
-![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/44c3bdde-0148-48ac-9cd4-d97a4e99d423)
 
 
 
 ### Statistics on Covid19:
-![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/442b622f-75a3-419d-9a2f-a796a40e9586)
+![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/5e938f28-95bd-4508-b0f7-51fdf28fe2b0)
 
 
 
