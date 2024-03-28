@@ -22,6 +22,8 @@ The Covd19 Management System was developed to streamline the management of COVID
 
 ## System Architecture
 
+![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/6e37af9a-50fd-4a30-84b2-45a45f31bd74)
+
 The application follows a client-server architecture, with a client-side application interacting with server-side APIs, which in turn interacts with a database to store and retrieve information. 
 There are 4 layers in the architecture: 
 1. The database layer. 
@@ -69,9 +71,9 @@ Dotenv, BodyParser, CookieParser, Cors, Morgan.
 
 - The database stores the application's data in a structured format.
 - It consists of tables to organize data.
-- Entity Framework is used for communication between the server-side APIs and the SQL Server database.
 
 ### Schematic View of Information in the Database:
+![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/94e907cd-5491-4c68-86f1-0a0ac41067a4)
 
 - members table: Stores information about members.
 Id, name, address,date of birth and phone numbers.
@@ -127,30 +129,38 @@ Below you can see how many members didn't get any vaccine.
 ## Screenshots
 
 ### Homepage:
+![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/bcf35510-1071-45f4-b1db-6a4fde70851c)
 
 
 ### Statistics on Covid19:
+![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/442b622f-75a3-419d-9a2f-a796a40e9586)
 
 
 ### Adding New Member:
+![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/8ee1ed26-eb6f-476c-9df3-fdbdbc9c775f)
 
 
 ### Basic Member Information:
+![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/7e1e294b-28bd-4ad4-a503-77578e38082d)
 
 
 ### Edit Member Details:
+![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/55f01fe6-bb44-4e96-a27e-a8526b72610c)
 
 
 ### Member Covid19 Details:
+![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/423447d1-5a90-452f-8c92-12a1be1cfb90)
+
+![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/9cab7965-9088-487f-956e-93f57e2e7b4d)
 
 
 ### Editing a Particular Vaccine:
+![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/be51baca-d566-4574-9929-ba7acbdc5ed2)
 
 
 ### Edit/Add a Sick or Recovery Day:
+![image](https://github.com/SaraOsdi/hadasim_home_assignment/assets/144591438/06a3d7e0-e148-467a-b753-cc1a97c24ecc)
 
-
-### Add Vaccination:
 
 
 ## Contact Me
